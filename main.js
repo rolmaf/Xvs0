@@ -1,5 +1,6 @@
 let char = "X";
 let turn = 1;
+let i = 0;
 let area = [
     ["1" , "2" , "3"] , 
     ["4" , "5" , "6"] , 
@@ -7,11 +8,13 @@ let area = [
 ];
 let turn_see;
 document.querySelector("table").onclick=function(){
+  if (i !=  8) {
     let col = event.target.cellIndex;
     let row = event.target.parentNode.rowIndex;
     turn_see = document.querySelector("p");
     let cell = event.target;
     if (area[row][col] != "X" &&  area[row][col] != "0"){
+      i = i + 1;
       if (turn % 2 == 0) {
           char = "0";
           area[row][col] = "0";
@@ -30,6 +33,12 @@ document.querySelector("table").onclick=function(){
     else {
       alert("Не жульничайте)");
     }
+  }
+  else {
+    alert("Ничья!")
+    location.reload();
+  }
+    
 };
 function checkWinner() {
     if (area[0][0] == "X" && area[0][1] == "X" && area[0][2] == "X") {
