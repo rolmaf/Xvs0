@@ -1,14 +1,25 @@
 table {
-    width: 200px;
-    height: 200px;
+    width: 320px;
+    height: 320px;
     margin: auto;
 }
 td {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     text-align: center;
-    font-size: 19.5pt;
+    font-size: 19pt;
 }
 body {
     text-align: center;
+}
+.logo-navbar {
+    width: 40px;
+    transition: 1s;
+}
+.logo-navbar:hover {
+    transition: 1s;
+    transform: rotate(360deg)
+}
+.navbar {
+    font-size: 12pt;
 }
